@@ -19,6 +19,9 @@ public class Passport {
     @Column(name = "eye_color")
     private String eyeColor;
 
+    @OneToOne(mappedBy = "passport", cascade = CascadeType.ALL)
+    private Student student;
+
     public Passport() {
     }
 
@@ -58,6 +61,14 @@ public class Passport {
 
     public void setEyeColor(String eyeColor) {
         this.eyeColor = eyeColor;
+    }
+
+    public Student getStudent() {
+        return student;
+    }
+
+    public void setStudent(Student student) {
+        this.student = student;
     }
 
     @Override
