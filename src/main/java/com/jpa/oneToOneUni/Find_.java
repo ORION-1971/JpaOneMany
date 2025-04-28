@@ -17,7 +17,7 @@ public class Find_ {
         try {
             transaction.begin();
 
-            Student student = manager.find(Student.class, 3);  // найти студента с id 3
+            Student student = manager.find(Student.class, 1);  // найти студента с id 3
             System.out.println(student);
             System.out.println(student.getPassport());                  // получить его паспорт
 

@@ -1,5 +1,6 @@
 package com.jpa.oneToOneBi;
 
+import com.jpa.entity.EyeColor;
 import com.jpa.entity.Passport;
 import com.jpa.entity.Student;
 import jakarta.persistence.EntityManager;
@@ -25,7 +26,7 @@ public class OneToOneBi {
         System.out.println("Введи email");
         String email = scan.nextLine();
         System.out.println("Цвет глаз");
-        String eyeColor = scan.nextLine();
+        EyeColor eyeColor = EyeColor.valueOf(scan.next().toUpperCase());
         System.out.println("Введи рост");
         Integer height = scan.nextInt();
 

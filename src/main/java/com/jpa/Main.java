@@ -1,10 +1,15 @@
 package com.jpa;
 
+import com.jpa.entity.EyeColor;
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
 
+        Scanner sc = new Scanner(System.in);
+        EyeColor eyeColor = EyeColor.valueOf(sc.next());
+        System.out.println(eyeColor);
     }
 }

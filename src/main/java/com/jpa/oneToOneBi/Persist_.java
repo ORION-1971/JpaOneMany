@@ -1,5 +1,6 @@
 package com.jpa.oneToOneBi;
 
+import com.jpa.entity.EyeColor;
 import com.jpa.entity.Passport;
 import com.jpa.entity.Student;
 import jakarta.persistence.EntityManager;
@@ -21,7 +22,7 @@ public class Persist_ {
             transaction.begin();
 
             Student student = new Student("John", "Travolta", 7.8);
-            Passport passport = new Passport("travol@gmail.com", 182, "black");
+            Passport passport = new Passport("travol@gmail.com", 182, EyeColor.BLACK);
 
             passport.setStudent(student);                   // 1 - передача студента паспорту
             student.setPassport(passport);                  // 2 - передача паспорта студенту

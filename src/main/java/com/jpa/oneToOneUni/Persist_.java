@@ -1,5 +1,6 @@
 package com.jpa.oneToOneUni;
 
+import com.jpa.entity.EyeColor;
 import com.jpa.entity.Passport;
 import com.jpa.entity.Student;
 import jakarta.persistence.EntityManager;
@@ -19,7 +20,7 @@ public class Persist_ {
             transaction.begin();
 
             Student student = new Student("John", "Travolta", 7.8);
-            Passport passport = new Passport("travol@gmail.com", 182, "black");
+            Passport passport = new Passport("travol@gmail.com", 182, EyeColor.BLACK);
 
             student.setPassport(passport);
             //manager.persist(passport);         // добавление паспорта автоматом (CascadeType.ALL)
