@@ -19,7 +19,7 @@ public class Student {
     @Column(name = "avg_grade")
     private Double avgGrade;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "passport_id")
     private Passport passport;
 

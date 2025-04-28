@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 public class OneToOneUni {
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Scanner scan = new Scanner(System.in);
 
