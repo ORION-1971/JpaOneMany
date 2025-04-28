@@ -1,6 +1,5 @@
-package com.jpa;
+package com.jpa.oneToOneUni;
 
-import com.jpa.entity.Passport;
 import com.jpa.entity.Student;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;

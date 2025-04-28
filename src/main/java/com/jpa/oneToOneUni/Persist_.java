@@ -1,12 +1,13 @@
-package com.jpa;
+package com.jpa.oneToOneUni;
 
+import com.jpa.entity.Passport;
 import com.jpa.entity.Student;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.Persistence;
 
-public class Remove_ {
+public class Persist_ {
 
     public static void main(String[] args) {
 
@@ -17,8 +18,12 @@ public class Remove_ {
         try {
             transaction.begin();
 
-            Student student = manager.find(Student.class, 5);  // найти студента с id 5
-            manager.remove(student);                                     // удаление студента + паспорт
+            Student student = new Student("John", "Travolta", 7.8);
+            Passport passport = new Passport("travol@gmail.com", 182, "black");
+
+            student.setPassport(passport);
+            //manager.persist(passport);         // добавление паспорта автоматом (CascadeType.ALL)
+            manager.persist(student);
 
             transaction.commit();
 

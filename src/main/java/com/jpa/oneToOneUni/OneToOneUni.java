@@ -1,4 +1,4 @@
-package com.jpa;
+package com.jpa.oneToOneUni;
 
 import com.jpa.entity.Passport;
 import com.jpa.entity.Student;
