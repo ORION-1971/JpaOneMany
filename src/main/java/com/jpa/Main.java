@@ -1,6 +1,6 @@
 package com.jpa;
 
-import com.jpa.entity.EyeColor;
+import com.jpa.OneToOne.entity.EyeColor;
 
 import java.util.Scanner;
 

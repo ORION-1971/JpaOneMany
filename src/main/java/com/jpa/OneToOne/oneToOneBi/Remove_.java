@@ -1,7 +1,6 @@
-package com.jpa.oneToOneBi;
+package com.jpa.OneToOne.oneToOneBi;
 
-import com.jpa.entity.Passport;
-import com.jpa.entity.Student;
+import com.jpa.OneToOne.entity.Passport;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;

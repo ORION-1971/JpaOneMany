@@ -1,4 +1,4 @@
-package com.jpa.entity;
+package com.jpa.OneToOne.entity;
 
 public enum EyeColor {
     BLACK, BLUE, GREEN, BROWN;

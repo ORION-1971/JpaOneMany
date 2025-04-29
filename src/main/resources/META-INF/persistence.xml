@@ -5,8 +5,10 @@
              https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
 
     <persistence-unit name="jpa-course">
-        <class>com.jpa.entity.Student</class>
-        <class>com.jpa.entity.Passport</class>
+        <class>com.jpa.OneToMany.entity.Student</class>
+        <class>com.jpa.OneToMany.entity.University</class>
+<!--        <class>com.jpa.OneToOne.entity.Student</class>-->
+<!--        <class>com.jpa.OneToOne.entity.Passport</class>-->
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
             <property name="jakarta.persistence.jdbc.url"    value="jdbc:mysql://localhost:3306/test_db" />

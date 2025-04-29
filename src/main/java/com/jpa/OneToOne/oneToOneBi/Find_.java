@@ -1,16 +1,12 @@
-package com.jpa.oneToOneBi;
+package com.jpa.OneToOne.oneToOneBi;
 
-import com.jpa.entity.EyeColor;
-import com.jpa.entity.Passport;
-import com.jpa.entity.Student;
+import com.jpa.OneToOne.entity.Passport;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.Persistence;
 
-import java.util.Scanner;
-
-public class Persist_ {
+public class Find_ {
 
     public static void main(String[] args) {
 
@@ -21,13 +17,9 @@ public class Persist_ {
         try {
             transaction.begin();
 
-            Student student = new Student("John", "Travolta", 7.8);
-            Passport passport = new Passport("travol@gmail.com", 182, EyeColor.BLACK);
-
-            passport.setStudent(student);                   // 1 - передача студента паспорту
-            student.setPassport(passport);                  // 2 - передача паспорта студенту
-            // manager.persist(student);
-            manager.persist(passport);
+            Passport passport = manager.find(Passport.class, 3);  // найти паспорт с id 3
+            System.out.println(passport);
+            System.out.println(passport.getStudent());                     // получить его студента
 
             transaction.commit();
 

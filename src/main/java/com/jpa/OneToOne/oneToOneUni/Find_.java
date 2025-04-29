@@ -1,7 +1,6 @@
-package com.jpa.oneToOneBi;
+package com.jpa.OneToOne.oneToOneUni;
 
-import com.jpa.entity.Passport;
-import com.jpa.entity.Student;
+import com.jpa.OneToOne.entity.Student;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;
@@ -18,9 +17,9 @@ public class Find_ {
         try {
             transaction.begin();
 
-            Passport passport = manager.find(Passport.class, 3);  // найти паспорт с id 3
-            System.out.println(passport);
-            System.out.println(passport.getStudent());                     // получить его студента
+            Student student = manager.find(Student.class, 1);  // найти студента с id 3
+            System.out.println(student);
+            System.out.println(student.getPassport());                  // получить его паспорт
 
             transaction.commit();
 
