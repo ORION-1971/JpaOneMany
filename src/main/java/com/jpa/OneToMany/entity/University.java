@@ -22,7 +22,7 @@ public class University {
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "university_id")
-    private List<Student> students = new ArrayList<>();
+    private List<Student> students;
 
     public void addStudent(Student student) {
         students.add(student);
