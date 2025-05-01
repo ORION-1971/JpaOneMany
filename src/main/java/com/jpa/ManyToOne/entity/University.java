@@ -1,4 +1,4 @@
-package com.jpa.OneToMany.entity;
+package com.jpa.ManyToOne.entity;
 
 import jakarta.persistence.*;
 
@@ -20,12 +20,14 @@ public class University {
     @Column(name = "founding_date")
     private Date foundingDate;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "university_id")
+    @OneToMany(mappedBy = "university",
+                              cascade = CascadeType.ALL)
+    //@JoinColumn(name = "university_id")
     private List<Student> students = new ArrayList<>();
 
     public void addStudent(Student student) {
         students.add(student);
+        student.setUniversity(this);
     }
 
     public University() {}
