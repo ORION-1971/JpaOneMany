@@ -23,6 +23,7 @@ public class University {
     @OneToMany(mappedBy = "university",
                               cascade = CascadeType.ALL)
     //@JoinColumn(name = "university_id")
+    @OrderBy(value = "name DESC")  // сортировка студентов
     private List<Student> students = new ArrayList<>();
 
     public void addStudent(Student student) {
