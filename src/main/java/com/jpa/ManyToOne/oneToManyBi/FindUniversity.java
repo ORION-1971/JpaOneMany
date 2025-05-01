@@ -11,22 +11,22 @@ public class FindUniversity {
 
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("jpa-course");
         EntityManager manager = factory.createEntityManager();
-        EntityTransaction transaction = manager.getTransaction();
+        //EntityTransaction transaction = manager.getTransaction();
 
         try {
-            transaction.begin();
+            //transaction.begin();
 
             University university = manager.find(University.class, 2);  // id университета
 
             System.out.println(university.getName());                          // вывод университета
             System.out.println(university.getStudents());                   // студенты университета
 
-            transaction.commit();
+            //transaction.commit();
 
         } catch (Exception e) {
-            if (transaction != null && transaction.isActive()) {
-                transaction.rollback();
-            }
+//            if (transaction != null && transaction.isActive()) {
+//                transaction.rollback();
+//            }
             e.printStackTrace();
         }
         finally {
