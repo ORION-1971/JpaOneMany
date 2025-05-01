@@ -5,8 +5,10 @@
              https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
 
     <persistence-unit name="jpa-course">
-        <class>com.jpa.ManyToOne.entity.Student</class>
-        <class>com.jpa.ManyToOne.entity.University</class>
+        <class>com.jpa.ManyToMany.entity.Teacher</class>
+        <class>com.jpa.ManyToMany.entity.University</class>
+<!--        <class>com.jpa.ManyToOne.entity.Student</class>-->
+<!--        <class>com.jpa.ManyToOne.entity.University</class>-->
 <!--        <class>com.jpa.OneToMany.entity.Student</class>-->
 <!--        <class>com.jpa.OneToMany.entity.University</class>-->
 <!--        <class>com.jpa.OneToOne.entity.Student</class>-->
